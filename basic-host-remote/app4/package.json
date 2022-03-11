@@ -1,5 +1,5 @@
 {
-  "name": "@basic-host-remote/app2",
+  "name": "@basic-host-remote/app4",
   "version": "0.0.0",
   "private": true,
   "devDependencies": {
@@ -15,11 +15,11 @@
   "scripts": {
     "start": "webpack-cli serve",
     "build": "rm -rf ./dist && webpack --mode production",
-    "serve": "serve dist -p 3032",
+    "serve": "serve dist -p 3034",
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "react": "16.13.0",
-    "react-dom": "16.13.0"
+    "react": "16.14.0",
+    "react-dom": "16.14.0"
   }
 }

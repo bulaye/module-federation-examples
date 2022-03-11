@@ -9,7 +9,7 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'dist'),
     },
-    port: 3002,
+    port: 3003,
   },
   output: {
     publicPath: 'auto',
@@ -29,19 +29,16 @@ module.exports = {
   optimization: {
     minimize: false
   },
-  plugins: [
+  plugins: [ 
     new ModuleFederationPlugin({
-      name: 'app24',
-      library: { type: 'umd', name: 'app23' },
-      filename: 'app2-modules.js',
+      name: 'app3',
+      library: { type: 'var', name: 'app3' },
+      filename: 'app3-modules.js',
       exposes: {
-        './Button2': './src/Button',
+        './Button3': './src/Button',
+        './app3React': require.resolve('react'),
       },
-      shared: { 
-        'react': { singleton: true, shareScope: 'default' }, 
-        'react-dom': { singleton: true } 
-      },
-      shareScope: "test"
+      shared: { react: {  singleton: true, shareScope: "test" }, 'react-dom': { singleton: true } },
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',

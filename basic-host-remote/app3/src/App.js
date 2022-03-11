@@ -1,10 +1,10 @@
 import LocalButton from './Button';
 import React from 'react';
-import ReactDom from 'react-dom';
+
 const App = () => (
   <div>
-    <h1>Basic App 2</h1>
-    <h2>react version {React.version} {ReactDom.version}</h2>
+    <h1>Basic Host-App 3</h1>
+    <h2>react version {React.version}</h2>
     <LocalButton />
   </div>
 );

@@ -9,7 +9,7 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'dist'),
     },
-    port: 3002,
+    port: 3004,
   },
   output: {
     publicPath: 'auto',
@@ -31,15 +31,15 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'app24',
-      library: { type: 'umd', name: 'app23' },
-      filename: 'app2-modules.js',
+      name: 'app334',
+      library: { type: 'umd', name: 'app4' },
+      filename: 'app4-modules.js',
       exposes: {
-        './Button2': './src/Button',
+        './Button4': './src/Button',
       },
       shared: { 
-        'react': { singleton: true, shareScope: 'default' }, 
-        'react-dom': { singleton: true } 
+        'react': { import: "react", shareKey: 'react',singleton: true },
+        'react-dom': { import: "react-dom", shareKey: 'react-dom', singleton: true } 
       },
       shareScope: "test"
     }),
